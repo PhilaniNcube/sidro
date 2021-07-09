@@ -1,26 +1,96 @@
-import { createGlobalStyle, ThemeProvider } from 'styled-components'
+import Navbar from '../components/Navbar';
+import { createGlobalStyle, ThemeProvider } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
-  body {
+
+:root {
+  --green: #058C42;
+  --blue: #0290d5;
+  --dark-blue: #004aa1;
+  --dark: #0d2139;
+  --black: #252627;
+  --light-blue: #B6EFD4;
+  --red: #D00000;
+}
+
+  *, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
-`
 
-const theme = {
-  colors: {
-    primary: '#0070f3',
-  },
-}
+  html {
+    font-size: 62.5%;
+  }
+
+  body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: var(--black);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1;
+    font-weight: 900;
+  }
+
+  ul, ol, li {
+    list-style-type: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
+
+  .container {
+    width: 90%;
+    max-width: 1280px;
+    min-width: 300px;
+    margin: 0 auto;
+  }
+
+  .section-heading {
+    font-size: 3rem;
+    color: var(--dark);
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .section-sub-heading {
+    font-size: 1.5rem;
+    color: var(--dark);
+    font-weight: 300;
+    text-align: center;
+    position: relative;
+    width: fit-content;
+    margin: 0 auto;
+
+    &:after {
+      content:'';
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateX(115%);
+      border-radius: 10px;
+      height: 3px;
+      width: 30%;
+      background-color: green;
+
+    }
+  }
+`;
 
 export default function App({ Component, pageProps }) {
   return (
     <>
       <GlobalStyle />
-      <ThemeProvider theme={theme}>
-        <Component {...pageProps} />
-      </ThemeProvider>
+      <Navbar />
+      <Component {...pageProps} />
     </>
-  )
+  );
 }
