@@ -112,10 +112,11 @@ const ServicesSection = () => {
               <div className="textBox">
                 <h3>Micro Lending</h3>
                 <p>
-                  Maximize social gains in microfinance while providing
-                  investors with a fair and appealing financial return. We offer
-                  the right loans–with the best rates, terms, and costs–to meet
-                  our client’s basic needs.
+                  Our microlending facility is an alternative to the
+                  conventional lending facilities that our clients will have
+                  access to. We seek to assist new businesses and small firms
+                  with access to finance early in their business journey at an
+                  accessible and scalable interest rate.
                 </p>
                 <IoIosArrowRoundForward className="card-icon" />
               </div>

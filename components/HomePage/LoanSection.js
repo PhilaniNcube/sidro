@@ -281,11 +281,11 @@ const LoanSection = () => {
 
   return (
     <Wrapper>
-      <div class="container">
-        <div class="payment">
+      <div className="container">
+        <div className="payment">
           <h4 className="box-title">Quick Payment Process</h4>
         </div>
-        <div class="fees">
+        <div className="fees">
           <h4 className="box-title">No Prepayment Fees</h4>
         </div>
         <form class="inputs">
@@ -318,7 +318,7 @@ const LoanSection = () => {
             <h3>Monthly Repayment R{monthlyRepayment.toFixed(2)}</h3>
           </div>
         </form>
-        <div class="text">
+        <div className="text">
           <h4>Company Introductions</h4>
           <h2>
             Our offerings aim to give high quality service and convenience.
