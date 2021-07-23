@@ -1,3 +1,5 @@
+import { Fragment } from 'react';
+import Head from 'next/head';
 import styled from 'styled-components';
 import AboutSection from '../components/HomePage/AboutSection';
 import Hero from '../components/HomePage/Hero';
@@ -12,12 +14,15 @@ const Title = styled.h1`
 
 export default function Home() {
   return (
-    <div>
+    <Fragment>
+      <Head>
+        <title>Sidro Finance | Home</title>
+      </Head>
       <Hero />
       <LoanSection />
       <ServicesSection />
       <AboutSection />
       <HowItWorks />
-    </div>
+    </Fragment>
   );
 }
