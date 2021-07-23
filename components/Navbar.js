@@ -111,16 +111,6 @@ const Navbar = () => {
                 <a className="nav-link">Loan</a>
               </Link>
             </li>
-            <li>
-              <Link href="/about">
-                <a className="nav-link">About</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/contact">
-                <a className="nav-link">Contact</a>
-              </Link>
-            </li>
           </nav>
         </div>
       </div>
