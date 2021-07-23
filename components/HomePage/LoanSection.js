@@ -16,6 +16,16 @@ const Wrapper = styled.section`
       'payment fees inputs'
       'text text inputs'
       'text text inputs';
+
+    @media screen and (max-width: 900px) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 10rem 1fr 1fr;
+
+      grid-template-areas:
+        'payment fees '
+        'text text'
+        'inputs inputs';
+    }
   }
 
   .payment,
@@ -24,6 +34,11 @@ const Wrapper = styled.section`
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
+    padding: 0.5rem;
+
+    h4 {
+      font-size: clamp(1.6rem, 2.5rem, 3vw);
+    }
   }
 
   .payment {
@@ -246,7 +261,7 @@ const Wrapper = styled.section`
       place-items: center;
 
       div {
-        padding: 0;
+        padding: 0.5rem;
         margin: 0;
         width: 80%;
         height: 8rem;
@@ -259,7 +274,7 @@ const Wrapper = styled.section`
         h4 {
           margin: 0;
           font-weight: 700;
-          font-size: 1.8rem;
+          font-size: clamp(1.6rem, 2.5rem, 3vw);
           color: #fff;
         }
       }
@@ -288,7 +303,7 @@ const LoanSection = () => {
         <div className="fees">
           <h4 className="box-title">No Prepayment Fees</h4>
         </div>
-        <form class="inputs">
+        <form className="inputs">
           <h2 className="form-title">How Much Do You Need?</h2>
           <div className="form">
             <div className="form-group">

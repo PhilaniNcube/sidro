@@ -27,7 +27,11 @@ const Wrapper = styled.div`
       }
 
       h1 {
-        font-size: 5rem;
+        font-size: clamp(
+          var(--fluid-type-min, 1rem),
+          calc(1rem + var(--fluid-type-target, 3vw)),
+          var(--fluid-type-max, 1.3rem)
+        );
         color: var(--dark-blue);
       }
     }

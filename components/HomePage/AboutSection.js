@@ -14,6 +14,17 @@ const Wrapper = styled.section`
     grid-template-areas:
       'headings headings headings text text text'
       'box box box-2 box-2 box-3 box-3';
+
+    @media screen and (max-width: 900px) {
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 15rem 1fr 10rem 10rem 10rem;
+      grid-template-areas:
+        'headings headings headings headings headings headings'
+        'text text text text text text'
+        'box box box box box box'
+        'box-2 box-2 box-2 box-2 box-2 box-2'
+        'box-3 box-3 box-3 box-3 box-3 box-3';
+    }
   }
 
   .headings {

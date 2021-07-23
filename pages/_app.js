@@ -11,6 +11,9 @@ const GlobalStyle = createGlobalStyle`
   --black: #252627;
   --light-blue: #B6EFD4;
   --red: #D00000;
+      --fluid-type-min: 2.5rem;
+  --fluid-type-max: 5rem;
+  --fluid-type-target: 5vw;
 }
 
   *, *::before, *::after {
@@ -33,6 +36,14 @@ const GlobalStyle = createGlobalStyle`
     line-height: 1;
     font-weight: 900;
   }
+
+h1 {
+  font-size: clamp(
+    var(--fluid-type-min, 1rem),
+    calc(1rem + var(--fluid-type-target, 3vw)),
+    var(--fluid-type-max, 1.3rem)
+  );
+}
 
   ul, ol, li {
     list-style-type: none;

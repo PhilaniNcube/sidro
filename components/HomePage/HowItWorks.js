@@ -25,6 +25,10 @@ const Wrapper = styled.section`
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
     height: 100%;
+
+    @media screen and (max-width: 900px) {
+      grid-template-columns: 1fr;
+    }
   }
 
   .box1,
@@ -35,6 +39,11 @@ const Wrapper = styled.section`
 
   .box2 {
     transform: translateY(-10%);
+
+    @media screen and (max-width: 900px) {
+      transform: translateY(0);
+      min-height: 100vh;
+    }
 
     ul {
       border-radius: 0.5rem;
@@ -65,6 +74,10 @@ const Wrapper = styled.section`
 
         p {
           padding-right: 20px;
+          @media screen and (max-width: 900px) {
+            font-size: 1.2rem;
+            padding: 10px;
+          }
         }
 
         span {
@@ -80,6 +93,10 @@ const Wrapper = styled.section`
           place-items: center;
 
           border-radius: 50%;
+
+          @media screen and (max-width: 900px) {
+            display: none;
+          }
         }
       }
     }
@@ -122,6 +139,10 @@ const Wrapper = styled.section`
     grid-template-columns: 2fr 3fr;
     gap: 1rem;
     width: 100%;
+
+    @media screen and (max-width: 900px) {
+      grid-template-columns: 1fr;
+    }
   }
 `;
 

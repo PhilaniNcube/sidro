@@ -15,6 +15,10 @@ const Wrapper = styled.section`
       margin-top: 3rem;
       gap: 2rem 4rem;
 
+      @media screen and (max-width: 900px) {
+        grid-template-columns: 1fr;
+      }
+
       .card {
         /* max-width: 350px; */
         min-width: 300px;
