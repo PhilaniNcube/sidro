@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router';
 import React from 'react';
 import styled from 'styled-components';
 import Button from '../Button';
@@ -39,6 +40,12 @@ const Wrapper = styled.div`
 `;
 
 const Hero = () => {
+  const router = useRouter();
+
+  const navigate = () => {
+    router.push('/loans');
+  };
+
   return (
     <Wrapper>
       <div className="container">
@@ -47,7 +54,7 @@ const Hero = () => {
           <h1>
             Connecting Your <br></br> Loan Needs
           </h1>
-          <Button>Apply</Button>
+          <Button onClick={navigate}>Apply</Button>
         </div>
       </div>
     </Wrapper>
