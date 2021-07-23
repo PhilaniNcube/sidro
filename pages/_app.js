@@ -1,5 +1,7 @@
 import Navbar from '../components/Navbar';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
+import { useEffect } from 'react';
+import TagManager from 'react-gtm-module';
 
 const GlobalStyle = createGlobalStyle`
 
@@ -97,6 +99,10 @@ h1 {
 `;
 
 export default function App({ Component, pageProps }) {
+  useEffect(() => {
+    TagManager.initialize({ gtmId: 'GTM-T8CTG5X' });
+  }, []);
+
   return (
     <>
       <GlobalStyle />
