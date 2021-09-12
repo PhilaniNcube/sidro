@@ -335,15 +335,17 @@ const LoanSection = () => {
         </form>
         <div className="text">
           <h4>Company Introductions</h4>
-          <h2>
-            Our offerings aim to give high quality service and convenience.
-          </h2>
+          <h2>Quality and convenient loan services.</h2>
           <p>
-            Our team believes that access to financial services facilitates the
-            alleviation of poverty and supports the development of a better
-            economy. Financial tools and training empower entrepreneurs to start
-            and sustain businesses, provide services to their families, and
-            transform communities.
+            We believe access to financial services improves lives and supports
+            economic growth. While micro-financing and loans empower
+            entrepreneurs to start and sustain businesses that transform
+            communities, personal loans make a real impact on many families.
+          </p>
+          <p>
+            We offer a niche range of short-term loans over a month to three
+            months. We offer the right loans to meet your basic needs with the
+            best rates, terms, and costs.
           </p>
           <div className="sub-grid">
             <div>

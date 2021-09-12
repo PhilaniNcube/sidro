@@ -1,7 +1,88 @@
-import React, { useState } from 'react';
+import React, { Fragment, useState } from 'react';
 import styled from 'styled-components';
 import Image from 'next/image';
 import { AiOutlineCheck, AiOutlinePlus, AiOutlineMinus } from 'react-icons/ai';
+import { IconContext } from 'react-icons';
+import { FiPlus, FiMinus } from 'react-icons/fi';
+
+const data = [
+  {
+    question: 'For personal cash loans, calculate your loan amount ',
+    answer:
+      'Use the slide calculator to select your loan amount and the number of days until you receive your next salary. Click, Apply Now to complete your application. You can update your information at any stage of the application process.',
+  },
+  {
+    question: 'Complete the online application form',
+    answer:
+      'Please provide accurate information to avoid delays in your application process. This step will only be completed once, and any information provided will be kept private. ',
+  },
+  {
+    question:
+      'Send us your three-month bank statements and a copy of your identification document.',
+    answer:
+      'Email documents to: loans@sidrofinance.co.za. We are also available on WhatsApp: +27XXXXXX.',
+  },
+  {
+    question: 'We perform a credit check.',
+    answer:
+      'Our advanced software analyses your application and performs a credit check based on the information you have entered. ',
+  },
+  {
+    question: 'Check your SMS or email for an update on your application ',
+    answer:
+      'We occasionally experience delayed responses from the credit bureaus, which can slow our processes slightly. We are always working to enhance the decision-making process.',
+  },
+  {
+    question: 'Accept the Quote, sign the contract and email or fax it to us.',
+    answer:
+      'We will send you a quotation and contract for servicing the loan, providing you with full details and associated charges. If you are satisfied with the agreement, accept all of the terms and conditions and agree to the declarations online, then email or fax the completed contract back to: accounts@sidrofinance.co.za or Whatsapp to xxxxxx. Each quote is valid for five days, which gives you some time to consider it further and make a final decision. You can view your loan application in the My Account section for further reference. ',
+  },
+  {
+    question: 'Receive money directly into your bank account.',
+    answer:
+      'Once we have received your signed contract, the money will be transferred directly into your account.',
+  },
+  {
+    question: 'Non Payment',
+    answer:
+      'We charge a monthly service fee of R50 and a 3% interest charge for any non-repayments. If you refrain from making payments for two months, your account will be sent to an external debt collection company. This could affect your credit score and may hinder you from receiving credit or other financial help from external providers in the future.',
+  },
+];
+
+const Accordion = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  color: #fff;
+
+  p {
+    font-size: 16px;
+  }
+`;
+
+const Wrap = styled.div`
+  width: 100%;
+  display: flex;
+  font-size: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  margin-top: 1rem;
+
+  h4 {
+    max-width: 50ch;
+  }
+
+  span {
+    font-size: 3rem;
+    padding-left: 2rem;
+  }
+`;
+
+const Dropdown = styled.div``;
 
 const Wrapper = styled.section`
   width: 100%;
@@ -33,7 +114,6 @@ const Wrapper = styled.section`
 
   .box1,
   .box2 {
-    height: 100%;
     width: 100%;
   }
 
@@ -46,7 +126,7 @@ const Wrapper = styled.section`
       width: 100%;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: space-around;
 
       .accordion-item {
         width: 90%;
@@ -67,7 +147,7 @@ const Wrapper = styled.section`
 
     @media screen and (max-width: 900px) {
       transform: translateY(0);
-      min-height: 100vh;
+      min-height: 80vh;
     }
   }
 
@@ -117,6 +197,16 @@ const Wrapper = styled.section`
 `;
 
 const HowItWorks = () => {
+  const [clicked, setClicked] = useState(false);
+
+  const toggle = (index) => {
+    if (clicked === index) {
+      return setClicked(null);
+    }
+
+    setClicked(index);
+  };
+
   return (
     <Wrapper>
       <div className="container">
@@ -174,117 +264,23 @@ const HowItWorks = () => {
           </div>
         </div>
         <div className="box2">
-          <div className="accordion">
-            <div className="accordion-item">
-              <h3>Calculate Your Loan Amount & Term</h3>{' '}
-              <div className="accordion-description">
-                <p>
-                  Use the slide calculator to select the amount of money you
-                  would like to loan and the number of days until your next
-                  pay-day. Satisfied with your request? Press the Apply Now for
-                  an online loan button. (Should you wish to change the
-                  information on your request, don't stress, you can update this
-                  information at any stage during the application process.)
-                </p>
-              </div>
-            </div>
-            <div className="accordion-item">
-              <h3>Fill in the online application form</h3>{' '}
-              <div className="accordion-description">
-                <p>
-                  Enter the required details into the application form provided.
-                  Be honest now, otherwise you'll just slow the process. You
-                  would only be lying to yourself which is a futile business,
-                  unless of course you are planning a surprise party for
-                  yourself.
-                </p>
-                <p>
-                  We will guide you through the whole process, so it should be
-                  quick and easy. We will keep your information private and you
-                  only need to complete this step once.{' '}
-                </p>
-              </div>
-            </div>
-            <div className="accordion-item">
-              <h3>
-                Mail or Whatsapp us three months bank statements and a copy of
-                your ID document.
-              </h3>
-              <div className="accordion-description">
-                <p>
-                  Mail your latest 3 months bank statements and a clear copy of
-                  your ID document to accounts@sidrofinance.co.za or Whatsapp to
-                </p>
-              </div>
-            </div>
-            <div className="accordion-item">
-              <h3>We perform a quick credit check.</h3>
-              <div className="accordion-description">
-                <p>
-                  Our advanced software then analyses your application and
-                  performs a quick credit check based on the information you
-                  have entered. This process is seamless and quick.
-                </p>
-              </div>
-            </div>
-            <div className="accordion-item">
-              <h3>We notify you via sms and email if the loan is approved.</h3>
-              <div className="accordion-description">
-                <p>
-                  We occasionally receive a delayed response from the credit
-                  bureaus, which can cause delays, but we are always working to
-                  enhance the decision-making process.
-                </p>
-              </div>
-            </div>
-            <div className="accordion-item">
-              <h3>
-                Accept the Quote and sign the contract and mail or fax it to us.
-              </h3>
-              <div className="accordion-description">
-                <p>
-                  We will send to you a quotation and contract for servicing the
-                  loan which will give you full details of the loan and
-                  associated charges. Accept all of the terms and conditions and
-                  agree to the declarations online, then mail or fax the
-                  completed contract back to us if you are satisfied with the
-                  agreement, which we are confident you will be.
-                </p>
-                <p>
-                  Mail the contract to: accounts@sidrofinance.co.za or Whatsapp
-                  to{' '}
-                </p>
-                <p>
-                  If you need some time to consider it further, each quote is
-                  valid for 5 days from its issue date and you can view your
-                  loan application in the My account section for further
-                  reference.
-                </p>
-              </div>
-            </div>
-            <div className="accordion-item">
-              <h3>We transfer the Money directly into your bank account.</h3>
-              <div className="accordion-description">
-                <p>
-                  This is the best step. Money, transferred directly into your
-                  account.
-                </p>
-              </div>
-            </div>
-            <div className="accordion-item">
-              <h3>Non Repayment</h3>
-              <div className="accordion-description">
-                <p>
-                  We charge a monthly R50 service fee and a 3% interest charge
-                  for any non-repayments. If you refrain from making payments
-                  for two months, your account will be sent to an external debt
-                  collection company. This could affect your credit score and
-                  may hinder you from receiving credit or other financial help
-                  from external providers in the future.
-                </p>
-              </div>
-            </div>
-          </div>
+          <Accordion>
+            {data.map((item, index) => {
+              return (
+                <Fragment key={index}>
+                  <Wrap onClick={() => toggle(index)} key={index}>
+                    <h4>{item.question}</h4>
+                    <span>{clicked === index ? <FiMinus /> : <FiPlus />}</span>
+                  </Wrap>
+                  {clicked === index ? (
+                    <Dropdown>
+                      <p>{item.answer}</p>
+                    </Dropdown>
+                  ) : null}
+                </Fragment>
+              );
+            })}
+          </Accordion>
         </div>
       </div>
     </Wrapper>

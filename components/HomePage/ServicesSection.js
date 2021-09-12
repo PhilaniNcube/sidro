@@ -76,19 +76,19 @@ const ServicesSection = () => {
     <Wrapper>
       <div className="container">
         <h3 className="section-sub-heading">What We Are Offering</h3>
-        <h2 className="section-heading">All Loan Services</h2>
+        <h2 className="section-heading">Loan Services</h2>
         <div className="service-cards">
           <div className="card">
             <div className="imgBox">
               <Image src="/images/business-1.jpeg" width={1920} height={1280} />
             </div>
             <div className="textBox">
-              <h3>Cash Loans</h3>
+              <h3>Personal Cash Loans</h3>
               <p>
-                We offer loans between R500 and R5000. Our repayment period is
-                between 1 month and a maximum of three months. New clients will
-                be charged an interest rate of 5% per month and returning
-                clients will be charged 3% per month.
+                Get access to cash loans between R1,000 and R5,000. Pay off your
+                loan in fixed monthly instalments over one to three months. The
+                maximum monthly interest rate is 5% for new clients and 3% for
+                returning clients.
               </p>
               <IoIosArrowRoundForward className="card-icon" />
             </div>
@@ -98,19 +98,30 @@ const ServicesSection = () => {
             <div className="imgBox">
               <Image src="/images/business-2.jpeg" width={1920} height={1280} />
               <div className="textBox">
-                <h3>Purchase Order Finance</h3>
+                <h3>SMME Purchase Order Finance</h3>
                 <p>
-                  The biggest challenge to all small and medium-sized businesses
-                  is access to finance. Whilst we wish we could assist everyone,
-                  we have an obligation towards you, to loan responsibly and
-                  with discretion. Our pre-qualifying criteria assists us with
-                  this.
+                  Do you have a contract for an order from a local municipality,
+                  government department, private company or even an offshore
+                  client, but you don’t have the finances to purchase supplies
+                  or finance the resources to execute the order? We can help
+                  you! We’ll provide you with the capital required, and then you
+                  pay us back once your client pays you.
                 </p>
+
+                <h4>Qualifying Criteria</h4>
                 <p>
-                  You need to have a registered business that has been trading
-                  for least 1 year. <strong>(Start-ups do not qualify).</strong>
+                  A registered business that has been trading for at least one
+                  year
                 </p>
-                <p>A minimum annual turnover of R500 000.</p>
+                <p>(Startups do not qualify).</p>
+                <ol>
+                  <li>CIPC Documents</li>
+                  <li>All director IDs and proof of addresses</li>
+                  <li>The company’s proof of address</li>
+                  <li>A valid purchase order</li>
+                  <li>Supplier Quotes</li>
+                  <li>Minimum annual turnover of R500,000</li>
+                </ol>
                 <IoIosArrowRoundForward className="card-icon" />
               </div>
             </div>

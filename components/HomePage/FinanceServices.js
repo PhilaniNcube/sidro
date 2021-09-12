@@ -8,7 +8,7 @@ const services = [
     text:
       'If you have sold your property and have money due to you on registration, Sidro Finance could advance a portion of this money upfront.',
     image: {
-      url: 'property.jpg',
+      url: 'property_seller.jpg',
       width: 1920,
       height: 1285,
     },
@@ -38,7 +38,7 @@ const services = [
     text:
       'As a property developer, you may find your cash resources stretched during the final stages of your project.',
     image: {
-      url: 'developer.jpg',
+      url: 'developer_finance.jpg',
       width: 1920,
       height: 1080,
     },
@@ -58,7 +58,7 @@ const services = [
     text:
       'Also known as Court Bonds Sidro Finance can assist with Bonds of Security for Executors, Curators, Trustees and Liquidators.',
     image: {
-      url: 'security.jpg',
+      url: 'security_bonds.jpg',
       width: 1920,
       height: 1280,
     },
@@ -68,7 +68,7 @@ const services = [
     text:
       'A short term loan, secured by unencumbered assets (typically property). No monthly repayments required as interest and capital is repaid together at the end of the 6 months.',
     image: {
-      url: 'backed.jpg',
+      url: 'property_backed_finance.jpg',
       width: 1920,
       height: 1279,
     },
