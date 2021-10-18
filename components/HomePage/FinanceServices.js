@@ -23,16 +23,7 @@ const services = [
       height: 1080,
     },
   },
-  {
-    title: 'Trust Administration',
-    text:
-      'Rodel Fiduciary offers a digitally integrated trust and case management system for the beneficiaries of disability awards.',
-    image: {
-      url: 'trust.jpg',
-      width: 1920,
-      height: 1280,
-    },
-  },
+
   {
     title: 'Developer Finance',
     text:
